@@ -1,0 +1,37 @@
+{
+    "name": "healthcare_query_test",
+    "task_type": "healthcare_query",
+    "description": "Test dataset for healthcare-related queries",
+    "test_cases": [
+      {
+        "input": "What are the warning signs of a heart attack?",
+        "expected_output": "The warning signs of a heart attack include chest pain or discomfort, shortness of breath, pain or discomfort in the arms, back, neck, jaw, or stomach, lightheadedness, and cold sweat.",
+        "description": "Heart attack warning signs",
+        "tags": ["cardiovascular", "emergency"]
+      },
+      {
+        "input": "How often should adults get a routine physical examination?",
+        "expected_output": "Generally, healthy adults should get a routine physical examination every 1-3 years depending on age and risk factors. Adults over 50 may need more frequent check-ups.",
+        "description": "Routine physical frequency",
+        "tags": ["preventive care", "general health"]
+      },
+      {
+        "input": "What's the difference between type 1 and type 2 diabetes?",
+        "expected_output": "Type 1 diabetes is an autoimmune condition where the body doesn't produce insulin. Type 2 diabetes is a metabolic disorder where the body doesn't use insulin properly, often related to lifestyle factors.",
+        "description": "Diabetes types comparison",
+        "tags": ["diabetes", "chronic condition"]
+      },
+      {
+        "input": "What vaccines are recommended for adults?",
+        "expected_output": "Recommended vaccines for adults include influenza (flu) annually, Td/Tdap (tetanus, diphtheria, pertussis), shingles for those over 50, pneumococcal for those over 65, and others based on risk factors and medical history.",
+        "description": "Adult vaccines",
+        "tags": ["vaccines", "preventive care"]
+      },
+      {
+        "input": "How can I reduce my cholesterol levels naturally?",
+        "expected_output": "Natural ways to reduce cholesterol include eating a heart-healthy diet (lower saturated fats, increase fiber), regular exercise, maintaining a healthy weight, quitting smoking, and limiting alcohol consumption.",
+        "description": "Natural cholesterol reduction",
+        "tags": ["cardiovascular", "lifestyle"]
+      }
+    ]
+  }

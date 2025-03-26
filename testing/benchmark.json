@@ -1,0 +1,82 @@
+{
+    "name": "healthcare_ai_benchmark",
+    "description": "Benchmark for healthcare-specific AI tasks",
+    "version": "1.0",
+    "tasks": [
+      {
+        "id": "medical_summary_1",
+        "task_type": "medical_records_summary",
+        "description": "Summarize patient visit notes",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a medical records summarization assistant. Summarize the provided medical information concisely."
+          },
+          {
+            "role": "user",
+            "content": "Patient: Jane Smith, 58 y.o. female\nVisit Date: January 12, 2023\n\nChief Complaint: Fatigue, weight loss, increased thirst for 3 months\n\nHistory of Present Illness: Patient reports gradual onset of fatigue, unintentional weight loss of 15 pounds over 3 months, and increased thirst and urination. No fever, nausea, or vomiting. Denies change in diet or exercise regimen.\n\nPast Medical History: Hypertension (diagnosed 2015), Hyperlipidemia (diagnosed 2017)\n\nMedications: Lisinopril 10mg daily, Atorvastatin 20mg daily\n\nAllergies: Penicillin (hives)\n\nVital Signs:\nBP: 138/85\nHR: 82\nTemp: 98.6°F\nRR: 16\nSpO2: 98% on room air\nWeight: 165 lbs (down from 180 lbs 3 months ago)\n\nPhysical Exam: General - alert, oriented, no acute distress. Heart - regular rate and rhythm, no murmurs. Lungs - clear to auscultation bilaterally. Abdomen - soft, non-tender, no organomegaly.\n\nLaboratory Results:\nFasting Blood Glucose: 215 mg/dL (elevated)\nHbA1c: 8.4% (elevated)\nComprehensive Metabolic Panel: Within normal limits except glucose\nThyroid Function Tests: Within normal limits\n\nAssessment: New-onset Type 2 Diabetes Mellitus\n\nPlan:\n1. Start Metformin 500mg BID with meals\n2. Diabetic education referral\n3. Nutritionist referral\n4. Home glucose monitoring\n5. Follow-up in 2 weeks"
+          }
+        ]
+      },
+      {
+        "id": "healthcare_query_1",
+        "task_type": "healthcare_query",
+        "description": "Answer health-related question",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a healthcare assistant providing general health information. Do not provide medical advice or diagnoses."
+          },
+          {
+            "role": "user",
+            "content": "What are the current recommendations for cancer screening for adults over 50 years old?"
+          }
+        ]
+      },
+      {
+        "id": "claim_processing_1",
+        "task_type": "claim_processing",
+        "description": "Process insurance claim",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a claims processing assistant. Extract key information from claims and provide a structured summary."
+          },
+          {
+            "role": "user",
+            "content": "Claim #: HC-2023-45982\nDate of Service: March 15, 2023\nProvider: Dr. Robert Chen, Cardiology\nFacility: Memorial Hospital\n\nServices:\n1. Echocardiogram, complete (CPT: 93306) - $450\n2. Office consultation, comprehensive (CPT: 99244) - $275\n\nDiagnosis Codes:\n- I50.1 (Left ventricular failure)\n- I10 (Essential hypertension)\n\nPatient Responsibility:\n- Copay: $30\n- Coinsurance: $145\n- Deductible: $0\n\nInsurance Payment: $550"
+          }
+        ]
+      },
+      {
+        "id": "medication_query_1",
+        "task_type": "healthcare_query",
+        "description": "Answer medication question",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a healthcare assistant providing general health information. Do not provide medical advice or diagnoses."
+          },
+          {
+            "role": "user",
+            "content": "What is the difference between ACE inhibitors and ARBs for blood pressure control?"
+          }
+        ]
+      },
+      {
+        "id": "medical_summary_2",
+        "task_type": "medical_records_summary",
+        "description": "Summarize surgical notes",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a medical records summarization assistant. Summarize the provided medical information concisely."
+          },
+          {
+            "role": "user",
+            "content": "OPERATIVE REPORT\n\nPATIENT: John Doe\nDOB: 05/12/1967\nMRN: 78234532\nDATE OF SURGERY: 04/28/2023\n\nPREOPERATIVE DIAGNOSIS: Right knee medial meniscus tear\n\nPOSTOPERATIVE DIAGNOSIS: Right knee medial meniscus tear with grade II chondromalacia of the medial femoral condyle\n\nPROCEDURE PERFORMED: Right knee arthroscopy with partial medial meniscectomy\n\nSURGEON: Dr. Sarah Williams\n\nANESTHESIA: General\n\nCOMPLICATIONS: None\n\nESTIMATED BLOOD LOSS: Minimal\n\nDESCRIPTION OF PROCEDURE:\nAfter obtaining informed consent, the patient was taken to the operating room and placed supine on the operating table. General anesthesia was administered without complication. The right lower extremity was prepped and draped in the usual sterile fashion.\n\nStandard anterolateral and anteromedial portals were established. Diagnostic arthroscopy revealed a complex tear of the posterior horn of the medial meniscus. Additionally, grade II chondromalacia of the medial femoral condyle was noted. The lateral meniscus, ACL, PCL, and remaining articular surfaces appeared intact.\n\nUsing arthroscopic instruments, the unstable portions of the torn medial meniscus were resected back to a stable rim. Care was taken to preserve as much functional meniscal tissue as possible. The knee was thoroughly irrigated.\n\nThe portals were closed with 4-0 nylon sutures. Sterile dressings were applied. The patient tolerated the procedure well and was transferred to the recovery room in stable condition.\n\nPOST-OPERATIVE PLAN:\n1. Weight-bearing as tolerated with crutches for support initially\n2. Physical therapy to begin 3-5 days postoperatively\n3. Follow-up appointment in 2 weeks for suture removal and progress assessment"
+          }
+        ]
+      }
+    ]
+  }
