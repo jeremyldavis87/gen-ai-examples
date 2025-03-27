@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - AI_GATEWAY_URL=${AI_GATEWAY_URL}
+      - PROJECT_NAME=${PROJECT_NAME}
+      - API_KEY=${API_KEY}
+    volumes:
+      - ../:/app
+    depends_on:
+      - postgres
+    networks:
+      - gen-ai-network
+
+  postgres:
+    image: ankane/pgvector:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=${PGVECTOR_USER:-postgres}
+      - POSTGRES_PASSWORD=${PGVECTOR_PASSWORD:-postgres}
+      - POSTGRES_DB=${PGVECTOR_DATABASE:-vector_db}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - gen-ai-network
+
+networks:
+  gen-ai-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
